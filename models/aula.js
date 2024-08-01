@@ -8,10 +8,13 @@ export const Aula = connection.define("aula",{
         type: DataTypes.STRING(130),  
         allowNull: false, 
     },
-    horario:{
-        type:DataTypes.DATE,
+    data:{
+        type:DataTypes.DATEONLY,
         allowNull: false,
-        unique:true
+    },
+    horario:{
+        type:DataTypes.TIME,
+        allowNull: false,
     },
     nivel: {
         type: DataTypes.STRING,
@@ -21,4 +24,6 @@ export const Aula = connection.define("aula",{
 
 
 //1:1
+
+// separar data e hora
 

@@ -31,8 +31,9 @@ export const Aluno = connection.define("aluno",{
 
 });
 
-Aluno.hasOne(Instrutor);
-Instrutor.belongsTo(Aluno);
+
+Instrutor.hasMany(Aula);
+Aula.belongsTo(Instrutor);
 
 //1:N
 Aluno.hasMany(Aula);
