@@ -1,0 +1,44 @@
+<!--
+
+CREATE DATABASE academia_db;
+
+USE academia_db;
+
+SHOW TABLES;
+
+SELECT * FROM alunos;
+SELECT * FROM aulas;
+SELECT * FROM instrutors;
+
+-- Inserção de Dados na Tabela Aluno
+INSERT INTO alunos (`nome`, `email`, `telefone`, `cpf`, `dataNasc`,`createdAt`, `updatedAt`) VALUES
+ ('Ana Silva', 'ana.silva@example.com', '1234567890', '11111111111', '1990-01-01', NOW(), NOW()),
+ ('Bruno Souza', 'bruno.souza@example.com', '1234567891', '22222222222', '1991-02-02', NOW(), NOW()),
+ ('Carlos Oliveira', 'carlos.oliveira@example.com', '1234567892', '33333333333', '1992-03-03', NOW(), NOW()),
+ ('Daniela Lima', 'daniela.lima@example.com', '1234567893', '44444444444', '1993-04-04', NOW(), NOW()),
+ ('Eduardo Pereira', 'eduardo.pereira@example.com', '1234567894', '55555555555', '1994-05-05', NOW(), NOW()),
+ ('Fernanda Costa', 'fernanda.costa@example.com', '1234567895', '66666666666', '1995-06-06', NOW(), NOW());
+
+-- Inserção de Dados na Tabela Instrutor
+INSERT INTO instrutors (`nome`, `especializacao`, `telefone`, `cpf`, `cref`, `createdAt`, `updatedAt`) VALUES
+ ('Gustavo Fernandes', 'Natação', '9876543210', '77777777777', '12345A', NOW(), NOW()),
+ ('Helena Almeida', 'Hidroginástica', '9876543211', '88888888888', '12345B', NOW(), NOW()),
+ ('Igor Martins', 'Aqua Pilates', '9876543212', '99999999999', '12345C', NOW(), NOW()),
+ ('Julia Santos', 'Treino Funcional Aquático', '9876543213', '00000000000', '12345D', NOW(), NOW()),
+ ('Luiz Costa', 'Natação Avançada', '9876543214', '11111111112', '12345E', NOW(), NOW()),
+ ('Mariana Ribeiro', 'Natação Intermediária', '9876543215', '22222222223', '12345F', NOW(), NOW());
+
+-- Inserção de Dados na Tabela Aula
+INSERT INTO aulas (`nomeAula`, `data`, `horario`, `nivel`, `createdAt`, `updatedAt`, `alunoId`, `instrutorId`) VALUES
+ ('Aula de Yoga', '2024-08-01', '08:00:00', 'Iniciante', NOW(), NOW(),1, 2),
+ ('Aula de Pilates', '2024-08-01', '10:00:00', 'Intermediário', NOW(), NOW(), 2, 3),
+ ('Aula de Zumba', '2024-08-01', '12:00:00', 'Avançado', NOW(), NOW(), 3, 1),
+ ('Aula de Musculação', '2024-08-02', '08:00:00', 'Iniciante', NOW(), NOW(), 4, 4),
+ ('Aula de Spinning', '2024-08-02', '10:00:00', 'Intermediário', NOW(), NOW(), 5, 6),
+ ('Treino Funcional Aquático', '2024-08-02', '12:00:00', 'Avançado', NOW(), NOW(), 6, 5);
+
+-->
+
+
+ 
+

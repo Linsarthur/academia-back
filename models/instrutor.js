@@ -9,7 +9,6 @@ export const Instrutor = connection.define("instrutor",{
     especializacao:{ 
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
     },
     telefone:{
         type: DataTypes.STRING,
