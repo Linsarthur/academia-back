@@ -25,6 +25,4 @@ export const Instrutor = connection.define("instrutor",{
         allowNull:false,
         unique:true
     }
-
-
 });

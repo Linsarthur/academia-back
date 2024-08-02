@@ -27,9 +27,9 @@ alunosRouter.get("/alunos", async (req, res) => {
       await Aluno.create(
         { nome, email, telefone, cpf, dataNasc }
       );
-      res.json({ message: "Aluno criado com sucesso" });
+      res.json({ message: "Aluno cadastrado com sucesso!" });
     } catch (err) {
-      res.status(500).json({ message: "Um erro ocorreu ao inserir Aluno." });
+      res.status(500).json({ message: "Um erro ocorreu ao cadastrar aluno." });
     }
   });
   
@@ -41,13 +41,13 @@ alunosRouter.get("/alunos", async (req, res) => {
   
       if (aluno) {
         await aluno.update({ nome, email, telefone, cpf, dataNasc });
-        res.json({ message: "Aluno atualizado." });
+        res.json({ message: "Aluno atualizado!" });
       } else {
         //404
         res.status(404).json({ message: "O aluno não foi encontrado!" });
       }
     } catch (err) {
-      res.status(500).json({ message: "Ocorreu um erro ao atualizar o Aluno" });
+      res.status(500).json({ message: "Ocorreu um erro ao atualizar o aluno." });
     }
   });
   
@@ -63,6 +63,6 @@ alunosRouter.get("/alunos", async (req, res) => {
           res.status(404).json({ message: "Aluno não encontrado!" })
         }
       } catch{
-        res.status(500).json({ message: "Ocorreu um erro ao excluir aluno!" })
+        res.status(500).json({ message: "Ocorreu um erro ao remover aluno!" })
       }
   })

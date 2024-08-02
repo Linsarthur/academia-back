@@ -35,7 +35,7 @@ aulasRouter.get("/aulas", async (req, res) => {
         res.status(404).json({ message: "Aula não encontrada." });
       }
     } catch (err) {
-      res.status(500).json({ message: "Ocorreu um erro ao excluir a aula" });
+      res.status(500).json({ message: "Ocorreu um erro ao remover a aula" });
     }
   });
   
@@ -66,7 +66,7 @@ aulasRouter.get("/aulas", async (req, res) => {
        const aula = await Aula.findByPk(req.params.id);
        if (aula) {
          await aula.update({ nomeAula, data, horario, nivel });
-         res.json({message: "Aula atualizado com sucesso."});
+         res.json({message: "Aula atualizada com sucesso."});
        } else {
          res.status(404).json({ message: "Aula não encontrada." });
        }

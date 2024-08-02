@@ -27,9 +27,9 @@ instrutoresRouter.get("/instrutors", async (req, res) => {
       await Instrutor.create(
         { nome, especializacao, telefone, cpf, cref }
       );
-      res.json({ message: "Instrutor criado com sucesso" });
+      res.json({ message: "Instrutor cadastrado com sucesso" });
     } catch (err) {
-      res.status(500).json({ message: "Um erro ocorreu ao inserir instrutor." });
+      res.status(500).json({ message: "Um erro ocorreu ao cadastrar instrutor." });
     }
   });
   
@@ -41,10 +41,10 @@ instrutoresRouter.get("/instrutors", async (req, res) => {
   
       if (instrutor) {
         await instrutor.update({ nome, especializacao, telefone, cpf, cref });
-        res.json({ message: "Instrutor atualizado." });
+        res.json({ message: "Instrutor atualizado com sucesso." });
       } else {
         //404
-        res.status(404).json({ message: "O instrutor não foi encontrado!" });
+        res.status(404).json({ message: "Instrutor não encontrado!" });
       }
     } catch (err) {
       res.status(500).json({ message: "Ocorreu um erro ao atualizar o instrutor" });
@@ -62,6 +62,6 @@ instrutoresRouter.get("/instrutors", async (req, res) => {
           res.status(404).json({ message: "Instrutor não encontrado!" })
         }
       } catch{
-        res.status(500).json({ message: "Ocorreu um erro ao excluir instrutor!" })
+        res.status(500).json({ message: "Ocorreu um erro ao remover instrutor!" })
       }
   })

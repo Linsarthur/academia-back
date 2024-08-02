@@ -1,7 +1,5 @@
-import { DataTypes, HasMany } from "sequelize"
-import {connection} from "../config/database.js"
-import { Aluno } from "./aluno.js"
-import {Instrutor} from "./instrutor.js"
+import { DataTypes } from "sequelize"
+import { connection } from "../config/database.js"
 
 export const Aula = connection.define("aula",{
     nomeAula: { 
@@ -23,7 +21,5 @@ export const Aula = connection.define("aula",{
 });
 
 
-//1:1
 
-// separar data e hora
 
