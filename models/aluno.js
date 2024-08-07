@@ -31,6 +31,7 @@ export const Aluno = connection.define("aluno",{
 
 });
 
+console.log('oi')
 
 Instrutor.hasMany(Aula);
 Aula.belongsTo(Instrutor);
